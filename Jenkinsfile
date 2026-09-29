@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+
         stage('Checkout') {
             steps {
                 git branch: 'main',
@@ -11,9 +12,9 @@ pipeline {
 
         stage('Verify Workspace') {
             steps {
-                sh 'pwd'
-                sh 'ls -la'
-                sh 'whoami'
+                bat 'cd'
+                bat 'dir'
+                bat 'whoami'
             }
         }
 
